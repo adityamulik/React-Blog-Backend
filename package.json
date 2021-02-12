@@ -1,0 +1,31 @@
+{
+  "name": "react-blog-backend",
+  "version": "1.0.0",
+  "description": "React Blog Backend App with Node, Express and Mongo setup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --exec npx babel-node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adityamulik/React-Blog-Backend.git"
+  },
+  "keywords": [],
+  "author": "Aditya Mulik",
+  "license": "GNU",
+  "bugs": {
+    "url": "https://github.com/adityamulik/React-Blog-Backend/issues"
+  },
+  "homepage": "https://github.com/adityamulik/React-Blog-Backend#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/node": "^7.12.16",
+    "@babel/preset-env": "^7.12.16",
+    "nodemon": "^2.0.7"
+  }
+}
