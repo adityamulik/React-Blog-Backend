@@ -1,9 +1,11 @@
 import express, { request } from 'express';
 import bodyParser from 'body-parser';
 import { MongoClient } from 'mongodb';
+import path from 'path';
 
 const app = express();
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, '/build')));
 
 const start = async () => {
   const client = await MongoClient.connect(
@@ -42,7 +44,11 @@ const start = async () => {
   });
 
   app.listen(8000, () => console.log('Server is listening on port 8000!'));  
-}
+};
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/build/index.html'));
+})
 
 start();
 
